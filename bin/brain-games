@@ -1,4 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-print_r("Welcome to the Brain Games!");
+// Add autoload file to use all available functions
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Use function greeting from ../src/Cli.php with BrainGames namespace
+use function BrainGames\Cli\greeting;
+
+greeting();

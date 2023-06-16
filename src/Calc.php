@@ -50,20 +50,8 @@ function calc(): void
             "*" => mul($firstOperand, $secondOperand),
         };
 
-        // line("Question: %d %s %d", $firstOperand, $choosedOperation, $secondOperand);
         $question = "Question {$firstOperand} {$choosedOperation} {$secondOperand}";
 
-        // $answer = (int)prompt("Your answer ");
-
-        // if ($answer === $correctAnswer) {
-        //     line("Correct!\n");
-        //     continue;
-        // }   else {
-        //     line("'%d' is wrong answer ; (. Correct answer was '%d'\n", $answer, $correctAnswer);
-        //     line("Let's try again, %s!", $name);
-
-        //     return;
-        // }
         if (isCorrectAnswer($question, $correctAnswer, $name)) {
             $counter += 1;
         } else {

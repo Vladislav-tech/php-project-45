@@ -14,6 +14,10 @@ is-even:
 brain-calc:
 	./bin/brain-calc
 
+# Start gcd game
+brain-gcd:
+	./bin/brain-gcd
+
 # Check if composer.json file is valid
 validate:
 	composer validate

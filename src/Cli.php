@@ -12,10 +12,13 @@ use function cli\prompt;
 
 /**
  * Function to greet user
+ * @return string name of user
  */
-function greeting(): void
+function greeting(): string
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
+
+    return $name;
 }

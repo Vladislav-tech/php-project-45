@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+// Add autoload file to use all available functions
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Use function startEvenGame from ../src/IsEven.php with BrainGames namespace
+use function BrainGames\IsEven\startEvenGame;
+
+startEvenGame();

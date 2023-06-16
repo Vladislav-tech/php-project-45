@@ -6,6 +6,9 @@ install:
 brain-games:
 	./bin/brain-games
 
+is-even:
+	./bin/brain-even
+
 # Check if composer.json file is valid
 validate:
 	composer validate

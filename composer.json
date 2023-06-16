@@ -12,10 +12,16 @@
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
-        "files": ["src/Cli.php", "src/IsEven.php"]
+        "files": [
+            "src/Cli.php", 
+            "src/IsEven.php", 
+            "src/Calc.php",
+            "src/Engine.php"
+        ]
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"

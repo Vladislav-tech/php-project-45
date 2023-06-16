@@ -8,10 +8,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 
 // Function to act with cli
-
 use function BrainGames\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
+
+use function BrainGames\Engine\isCorrectAnswer;
 
 
 function startEvenGame()
@@ -21,24 +22,26 @@ function startEvenGame()
 
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
+    $counter = 0;
+
     for ($i = 0; $i < 3; $i += 1) {
+        // random int number [1, 100]
         $randNum = rand(1, 100);
+
+        // define correct answer
         $correctAnswer = $randNum % 2 === 0 ? "yes" : "no";
 
-        line("Question: %s\n", $randNum);
+        $question = "Question: {$randNum}\n";
 
-        $answer = prompt("Your answer ");
 
-        if ($answer === $correctAnswer) {
-            line("Correct!\n");
-            continue;
-        } else {
-            line("'%s' is wrong answer ; (. Correct answer was '%s'\n", $answer, $correctAnswer);
-            line("Let's try again, %s!", $name);
-
-            return;
+        if (isCorrectAnswer($question, $correctAnswer, $name)) {
+            $counter += 1;
+        }   else {
+            break;
         }
     }
 
-    line("Congrulations %s!\n", $name);
+    if ($counter === 3) {
+        line("Congrulations %s!\n", $name);
+    }
 }

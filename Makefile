@@ -6,8 +6,13 @@ install:
 brain-games:
 	./bin/brain-games
 
+# Start "even or not" game
 is-even:
 	./bin/brain-even
+
+# Start calc game
+brain-calc:
+	./bin/brain-calc
 
 # Check if composer.json file is valid
 validate:

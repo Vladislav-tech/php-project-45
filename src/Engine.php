@@ -27,7 +27,7 @@ function isCorrectAnswer(string $question, int|string $correctAnswer, string $na
     if ($answer == $correctAnswer) {
         line("Correct \n");
     } else {
-        line("'%s' is wrong answer ; (. Correct answer was '%s'\n", $answer, $correctAnswer);
+        line("'%s' is wrong answer ; (. Correct answer was '%s'", $answer, $correctAnswer);
         line("Let's try again, %s!", $name);
 
         return false;

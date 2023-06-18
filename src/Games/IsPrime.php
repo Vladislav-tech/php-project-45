@@ -43,7 +43,7 @@ function startIsPrimeGame(): void
 
         $correctAnswer = isPrime($randNum) ? "yes" : "no";
 
-        $question = "Question {$randNum}\n";
+        $question = "Question {$randNum}";
 
         if (isCorrectAnswer($question, $correctAnswer, $name)) {
             $counter += 1;
@@ -53,6 +53,6 @@ function startIsPrimeGame(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations %s!\n", $name);
+        line("Congrulations %s!", $name);
     }
 }

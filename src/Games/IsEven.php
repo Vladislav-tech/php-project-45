@@ -29,7 +29,7 @@ function startEvenGame(): void
         // define correct answer
         $correctAnswer = $randNum % 2 === 0 ? "yes" : "no";
 
-        $question = "Question: {$randNum}\n";
+        $question = "Question: {$randNum}";
 
 
         if (isCorrectAnswer($question, $correctAnswer, $name)) {
@@ -40,6 +40,6 @@ function startEvenGame(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations, %s!\n", $name);
+        line("Congrulations, %s!", $name);
     }
 }

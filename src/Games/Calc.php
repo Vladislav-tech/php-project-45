@@ -51,7 +51,7 @@ function calc(): void
     $name = greeting();
 
     line("Hello %s!\n", $name);
-    line("What is the result of the expression?\n");
+    line("What is the result of the expression?");
 
     $operations = ["+", "-", "*"];
 
@@ -79,6 +79,6 @@ function calc(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations %s!\n", $name);
+        line("Congrulations %s!", $name);
     }
 }

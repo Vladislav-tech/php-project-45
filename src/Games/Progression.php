@@ -53,8 +53,8 @@ function progression(): void
 {
     $name = greeting();
 
-    line("Hello %s!\n", $name);
-    line("What number is missing in the progression?\n");
+    line("Hello %s!", $name);
+    line("What number is missing in the progression?");
 
     $counter = 0;
 
@@ -77,6 +77,6 @@ function progression(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations %s!\n", $name);
+        line("Congrulations %s!", $name);
     }
 }

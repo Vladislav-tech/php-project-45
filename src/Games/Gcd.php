@@ -28,8 +28,8 @@ function gcdGame(): void
 {
     $name = greeting();
 
-    line("Hello %s!\n", $name);
-    line("What is the result of the expression?\n");
+    line("Hello %s!", $name);
+    line("What is the result of the expression?");
 
     $counter = 0;
 
@@ -49,6 +49,6 @@ function gcdGame(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations %s!\n", $name);
+        line("Congrulations %s!", $name);
     }
 }

@@ -40,6 +40,6 @@ function startEvenGame(): void
     }
 
     if ($counter === 3) {
-        line("Congrulations %s!\n", $name);
+        line("Congrulations, %s!\n", $name);
     }
 }

@@ -18,6 +18,10 @@ brain-calc:
 brain-gcd:
 	./bin/brain-gcd
 
+# Start brain progression
+brain-progression:
+	./bin/brain-progression
+
 # Check if composer.json file is valid
 validate:
 	composer validate

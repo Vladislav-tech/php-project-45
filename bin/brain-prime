@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+// Add autoload file to use all available functions
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\IsPrime\startIsPrimeGame;
+
+startIsPrimeGame();

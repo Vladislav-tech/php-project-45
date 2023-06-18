@@ -22,6 +22,10 @@ brain-gcd:
 brain-progression:
 	./bin/brain-progression
 
+# Start prime game
+brain-prime:
+	./bin/brain-prime
+
 # Check if composer.json file is valid
 validate:
 	composer validate

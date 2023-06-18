@@ -15,7 +15,7 @@ use function cli\prompt;
 use function BrainGames\Engine\isCorrectAnswer;
 
 
-function startEvenGame()
+function startEvenGame(): void
 
 {
     $name = greeting();

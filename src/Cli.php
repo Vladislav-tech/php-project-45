@@ -1,5 +1,5 @@
 <?php
-// phpcs:ignoreFile
+
 namespace BrainGames\Cli;
 
 // Add autoload file to use all available functions

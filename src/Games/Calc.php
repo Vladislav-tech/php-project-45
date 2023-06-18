@@ -3,7 +3,7 @@
 namespace BrainGames\Calc;
 
 // Add autoload file to use all available functions
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 // Function to act with cli
 use function BrainGames\Cli\greeting;
@@ -12,16 +12,35 @@ use function cli\prompt;
 
 use function BrainGames\Engine\isCorrectAnswer;
 
-function sum(int $a, int $b): int {
+/**
+ * Get sum of two numbers.
+ * @param int|float $a First number.
+ * @param int|float $b Second number.
+ * @return int|float Sum of two numbers.
+ */
+function sum(int|float $a, int|float $b): int|float
+{
     return $a + $b;
 }
 
-function mul(int $a, int $b): int
+/**
+ * Get multiplication of two numbers.
+ * @param int|float $a First number.
+ * @param int|float $b Second number.
+ * @return int|float Product of two numbers.
+ */
+function mul(int|float $a, int|float $b): int|float
 {
     return $a * $b;
 }
 
-function sub(int $a, int $b): int
+/**
+ * Get substraction of two numbers.
+ * @param int|float $a First number.
+ * @param int|float $b Second number.
+ * @return int|float Substraction of two numbers.
+ */
+function sub(int|float $a, int|float $b): int|float
 {
     return $a - $b;
 }
@@ -44,7 +63,7 @@ function calc(): void
         $firstOperand = rand(-30, 30);
         $secondOperand = rand(-30, 30);
 
-        $correctAnswer = match($choosedOperation) {
+        $correctAnswer = match ($choosedOperation) {
             "+" => sum($firstOperand, $secondOperand),
             "-" => sub($firstOperand, $secondOperand),
             "*" => mul($firstOperand, $secondOperand),
@@ -62,5 +81,4 @@ function calc(): void
     if ($counter === 3) {
         line("Congrulations %s!\n", $name);
     }
-
 }

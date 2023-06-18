@@ -1,10 +1,9 @@
 <?php
 
-// phpcs:ignoreFile
 namespace BrainGames\IsEven;
 
 // Add autoload file to use all available functions
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 
 // Function to act with cli
@@ -16,7 +15,6 @@ use function BrainGames\Engine\isCorrectAnswer;
 
 
 function startEvenGame(): void
-
 {
     $name = greeting();
 
@@ -36,7 +34,7 @@ function startEvenGame(): void
 
         if (isCorrectAnswer($question, $correctAnswer, $name)) {
             $counter += 1;
-        }   else {
+        } else {
             break;
         }
     }
